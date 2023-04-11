@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Bootstrap網頁</title>    
+  </head>
+  <body style="padding-top:50px">
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top">
+	  <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">我的美國之旅</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+          <ul class="navbar-nav me-auto">           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">美食</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="taichungfood.html">波士頓</a>
+                <a class="dropdown-item" href="tainanfood.html">洛杉磯</a>
+				
+              </div>
+            </li>
+			<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">旅遊</a>
+              <div class="dropdown-menu">
+               
+				<a class="dropdown-item" href="Israel.html">舊金山</a>
+				
+            </li>
+          </ul>
+		  <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="輸入景點">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>  
+        </div>		
+      </div>
+    </nav>
+
+    <!-- 內容區 -->
+    <main>	
+      <div class="container">
+	    <h1 class="text-center mt-5">我的美國旅行日記</h1>
+		
+	    <!-- 第一個景點 -->
+	    <hr>
+        <div class="row">
+          <div class="col-md-7">
+            <h2><small></small></h2>
+            <p class="lead">美國是北美洲的一個國家，擁有各種各樣的地形和氣候。它擁有著名的自然景觀，如大峽谷、羚羊峽谷和黃石國家公園等。此外，它還有許多大城市，如紐約市、洛杉磯和芝加哥等。
+              同時美國是世界上最大的經濟體之一，具有高度發達的市場經濟。它擁有各種各樣的產業，從技術和金融到娛樂和旅遊等。美國還擁有許多著名的跨國公司，如蘋果、谷歌和微軟等
+            </p>
+		    <p>以下純屬虛構 by 詠傑
+        
+        </p>
+          </div>
+          <div class="col-md-5">
+            <img src="image\main.jpg" class="img-fluid">
+          </div>
+        </div>	
+		<div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <img class="card-img-top" src="image\F1-2.jpg">
+            <div class="card-body">
+              <h5 class="card-title">舊金山</h5>
+              <p class="card-text">位於美國加利福尼亞州中部沿海的大型城市，為加州唯一市郡合一的行政區，亦別名「金門城市」、「灣邊之城」、「霧城」等</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <img class="card-img-top" src="image\Hollywood.jpg">
+            <div class="card-body">
+              <h5 class="card-title">洛杉磯</h5>
+              <p class="card-text">位於美國加利福尼亞州南部的都市，也是洛杉磯郡的郡治，人口約397萬，為加州第一大城市</p>
+            </div>
+          </div>
+        </div>
+      </div>
+		
+      
+	  </div>
+	</main>
+	<!-- 觸發互動視窗的按鈕 -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+      data-bs-target="#myModal1">金門大橋</button>
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+      data-bs-target="#myModal2">好萊塢</button>
+	  <script>
+       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+       return new bootstrap.Tooltip(tooltipTriggerEl)
+       });
+      </script>
+      <!-- 互動視窗 -->
+      <div class="modal fade" id="myModal1" tabindex="-1">
+       <div class="modal-dialog">
+        <div class="modal-content">
+         <div class="modal-header">
+          <h3 class="modal-title">金門大橋</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+         </div>
+         <div class="modal-body">
+          <img src="image\SFO0000044_85511.jpg" width="50%" class="img-fluid">
+          <p class="h3 text-end">美麗景色</p>
+         </div>
+         <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" 
+            data-bs-placement="top" title="金門大橋">美景一</button>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- 互動視窗 -->
+      <div class="modal fade" id="myModal2" tabindex="-1">
+       <div class="modal-dialog">
+        <div class="modal-content">
+         <div class="modal-header">
+          <h3 class="modal-title">好萊塢</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+         </div>
+         <div class="modal-body">
+          <img src="image\HollywoodSign.jpg" width="50%" class="img-fluid">
+          <p class="h3 text-end">美麗景色</p>
+         </div>
+         <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-container="body"  
+           data-bs-toggle="popover" data-bs-placement="top" data-bs-content="好萊塢">美景二</button>
+		   <script> 
+			var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+           });
+
+           </script>
+         </div>
+        </div>
+       </div>
+      </div>
+    <!-- 頁尾 -->
+	<footer>
+	  <div class="container">
+	    <hr>              
+        <p>&copy; 2023JJJ&middot;<a href="#">隱私權政策</a>&middot;<a href="#">服務條款</a></p>
+		<p class="text-end"><a href="#">Back to top</a></p>
+      </div>
+    </footer> 	
+	
+  </body>
+</html>
